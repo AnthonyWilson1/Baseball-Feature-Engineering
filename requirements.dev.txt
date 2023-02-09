@@ -249,6 +249,8 @@ platformdirs==2.6.2
     #   black
     #   jupyter-core
     #   virtualenv
+plotly==5.13.0
+    # via -r requirements.dev.in
 pluggy==1.0.0
     # via
     #   diff-cover
@@ -346,6 +348,8 @@ stack-data==0.6.2
     # via ipython
 tblib==1.7.0
     # via sqlfluff
+tenacity==8.2.0
+    # via plotly
 terminado==0.17.1
     # via
     #   jupyter-server
