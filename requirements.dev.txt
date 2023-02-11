@@ -60,6 +60,10 @@ colorama==0.4.6
     # via sqlfluff
 comm==0.1.2
     # via ipykernel
+contourpy==1.0.7
+    # via matplotlib
+cycler==0.11.0
+    # via matplotlib
 debugpy==1.6.5
     # via ipykernel
 decorator==5.1.1
@@ -84,6 +88,8 @@ filelock==3.9.0
     # via virtualenv
 flake8==6.0.0
     # via -r requirements.dev.in
+fonttools==4.38.0
+    # via matplotlib
 fqdn==1.5.1
     # via jsonschema
 identify==2.5.13
@@ -127,6 +133,8 @@ jinja2==3.1.2
     #   nbconvert
     #   notebook
     #   sqlfluff
+joblib==1.2.0
+    # via scikit-learn
 json5==0.9.11
     # via jupyterlab-server
 jsonpointer==2.3
@@ -169,10 +177,14 @@ jupyterlab-pygments==0.2.2
     # via nbconvert
 jupyterlab-server==2.19.0
     # via jupyterlab
+kiwisolver==1.4.4
+    # via matplotlib
 markupsafe==2.1.2
     # via
     #   jinja2
     #   nbconvert
+matplotlib==3.6.3
+    # via seaborn
 matplotlib-inline==0.1.6
     # via
     #   ipykernel
@@ -218,7 +230,12 @@ notebook-shim==0.2.2
 numpy==1.24.2
     # via
     #   -r requirements.dev.in
+    #   contourpy
+    #   matplotlib
     #   pandas
+    #   scikit-learn
+    #   scipy
+    #   seaborn
 packaging==23.0
     # via
     #   build
@@ -226,10 +243,13 @@ packaging==23.0
     #   jupyter-server
     #   jupyterlab
     #   jupyterlab-server
+    #   matplotlib
     #   nbconvert
     #   pytest
 pandas==1.5.3
-    # via -r requirements.dev.in
+    # via
+    #   -r requirements.dev.in
+    #   seaborn
 pandocfilters==1.5.0
     # via nbconvert
 parso==0.8.3
@@ -242,6 +262,8 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
+pillow==9.4.0
+    # via matplotlib
 pip-tools==6.12.1
     # via -r requirements.dev.in
 platformdirs==2.6.2
@@ -283,6 +305,8 @@ pygments==2.14.0
     #   diff-cover
     #   ipython
     #   nbconvert
+pyparsing==3.0.9
+    # via matplotlib
 pyproject-hooks==1.0.0
     # via build
 pyrsistent==0.19.3
@@ -291,8 +315,8 @@ pytest==7.2.1
     # via sqlfluff
 python-dateutil==2.8.2
     # via
-    #   arrow
     #   jupyter-client
+    #   matplotlib
     #   pandas
 python-json-logger==2.0.4
     # via jupyter-events
@@ -327,6 +351,12 @@ rfc3986-validator==0.1.1
     # via
     #   jsonschema
     #   jupyter-events
+scikit-learn==1.2.1
+    # via -r requirements.dev.in
+scipy==1.10.0
+    # via scikit-learn
+seaborn==0.12.2
+    # via -r requirements.dev.in
 send2trash==1.8.0
     # via
     #   jupyter-server
@@ -356,6 +386,8 @@ terminado==0.17.1
     #   jupyter-server-terminals
     #   nbclassic
     #   notebook
+threadpoolctl==3.1.0
+    # via scikit-learn
 tinycss2==1.2.1
     # via nbconvert
 toml==0.10.2

@@ -10,3 +10,5 @@ sqlfluff==1.4.5
 pandas
 numpy
 plotly
+scikit-learn
+seaborn
