@@ -1,1 +1,5 @@
+pandas
 numpy
+plotly
+scikit-learn
+seaborn
