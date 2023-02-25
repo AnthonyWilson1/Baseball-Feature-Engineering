@@ -12,5 +12,4 @@ numpy
 plotly
 scikit-learn
 seaborn
-sqlalchemy
-mariadb
+

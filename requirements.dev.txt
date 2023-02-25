@@ -72,7 +72,7 @@ defusedxml==0.7.1
     # via nbconvert
 detect-secrets==1.4.0
     # via -r requirements.dev.in
-diff-cover==7.3.2
+diff-cover==7.5.0
     # via sqlfluff
 distlib==0.3.6
     # via virtualenv
@@ -92,8 +92,6 @@ fonttools==4.38.0
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
-greenlet==2.0.2
-    # via sqlalchemy
 identify==2.5.13
     # via pre-commit
 idna==3.4
@@ -181,8 +179,6 @@ jupyterlab-server==2.19.0
     # via jupyterlab
 kiwisolver==1.4.4
     # via matplotlib
-mariadb==1.1.6
-    # via -r requirements.dev.in
 markupsafe==2.1.2
     # via
     #   jinja2
@@ -247,7 +243,6 @@ packaging==23.0
     #   jupyter-server
     #   jupyterlab
     #   jupyterlab-server
-    #   mariadb
     #   matplotlib
     #   nbconvert
     #   pytest
@@ -377,8 +372,6 @@ sniffio==1.3.0
     # via anyio
 soupsieve==2.3.2.post1
     # via beautifulsoup4
-sqlalchemy==2.0.4
-    # via -r requirements.dev.in
 sqlfluff==1.4.5
     # via -r requirements.dev.in
 stack-data==0.6.2
@@ -435,7 +428,6 @@ traitlets==5.8.1
 typing-extensions==4.4.0
     # via
     #   black
-    #   sqlalchemy
     #   sqlfluff
 uri-template==1.2.0
     # via jsonschema
