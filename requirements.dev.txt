@@ -294,6 +294,8 @@ ptyprocess==0.7.0
     #   terminado
 pure-eval==0.2.2
     # via stack-data
+py4j==0.10.9
+    # via pyspark
 pycodestyle==2.10.0
     # via flake8
 pycparser==2.21
@@ -311,6 +313,12 @@ pyproject-hooks==1.0.0
     # via build
 pyrsistent==0.19.3
     # via jsonschema
+pyspark==3.0.3
+    # via
+    #   -r requirements.dev.in
+    #   pyspark-stubs
+pyspark-stubs==3.0.0.post3
+    # via -r requirements.dev.in
 pytest==7.2.1
     # via sqlfluff
 python-dateutil==2.8.2

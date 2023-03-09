@@ -12,3 +12,5 @@ numpy
 plotly
 scikit-learn
 seaborn
+pyspark
+pyspark-stubs
