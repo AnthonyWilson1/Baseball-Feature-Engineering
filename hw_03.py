@@ -124,7 +124,7 @@ def main():
     )
 
     rolling_average = rolling_average_t.transform(intermediate_df)
-    rolling_average.show(10)
+    rolling_average.show(100)
 
 
 if __name__ == "__main__":
