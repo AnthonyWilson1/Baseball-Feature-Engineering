@@ -109,7 +109,7 @@ ipykernel==6.20.2
     # via
     #   nbclassic
     #   notebook
-ipython==8.8.0
+ipython==8.11.0
     # via
     #   ipykernel
     #   jupyterlab
@@ -233,9 +233,11 @@ numpy==1.24.2
     #   contourpy
     #   matplotlib
     #   pandas
+    #   patsy
     #   scikit-learn
     #   scipy
     #   seaborn
+    #   statsmodels
 packaging==23.0
     # via
     #   build
@@ -246,10 +248,12 @@ packaging==23.0
     #   matplotlib
     #   nbconvert
     #   pytest
+    #   statsmodels
 pandas==1.5.3
     # via
     #   -r requirements.dev.in
     #   seaborn
+    #   statsmodels
 pandocfilters==1.5.0
     # via nbconvert
 parso==0.8.3
@@ -258,6 +262,8 @@ pathspec==0.10.3
     # via
     #   black
     #   sqlfluff
+patsy==0.5.3
+    # via statsmodels
 pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
@@ -294,6 +300,8 @@ ptyprocess==0.7.0
     #   terminado
 pure-eval==0.2.2
     # via stack-data
+py4j==0.10.9
+    # via pyspark
 pycodestyle==2.10.0
     # via flake8
 pycparser==2.21
@@ -311,6 +319,12 @@ pyproject-hooks==1.0.0
     # via build
 pyrsistent==0.19.3
     # via jsonschema
+pyspark==3.0.3
+    # via
+    #   -r requirements.dev.in
+    #   pyspark-stubs
+pyspark-stubs==3.0.0.post3
+    # via -r requirements.dev.in
 pytest==7.2.1
     # via sqlfluff
 python-dateutil==2.8.2
@@ -354,7 +368,9 @@ rfc3986-validator==0.1.1
 scikit-learn==1.2.1
     # via -r requirements.dev.in
 scipy==1.10.0
-    # via scikit-learn
+    # via
+    #   scikit-learn
+    #   statsmodels
 seaborn==0.12.2
     # via -r requirements.dev.in
 send2trash==1.8.0
@@ -366,6 +382,7 @@ six==1.16.0
     # via
     #   asttokens
     #   bleach
+    #   patsy
     #   python-dateutil
     #   rfc3339-validator
 sniffio==1.3.0
@@ -376,6 +393,8 @@ sqlfluff==1.4.5
     # via -r requirements.dev.in
 stack-data==0.6.2
     # via ipython
+statsmodels==0.13.5
+    # via -r requirements.dev.in
 tblib==1.7.0
     # via sqlfluff
 tenacity==8.2.0
