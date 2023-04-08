@@ -49,6 +49,7 @@ def main():
                 break
 
     check_predictors(dataset_table, predictors)
+    print(cat_dic)
 
     # Generate Plots
     def generate_plots(data_table, col_names, var_dict, response_name):
