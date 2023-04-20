@@ -15,3 +15,6 @@ seaborn
 pyspark
 pyspark-stubs
 statsmodels
+mariadb
+sqlalchemy
+mysql-connector-python

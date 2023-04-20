@@ -4,3 +4,6 @@ plotly
 scikit-learn
 seaborn
 statsmodels
+mariadb
+sqlalchemy
+mysql-connector-python
