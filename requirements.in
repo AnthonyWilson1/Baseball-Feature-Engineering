@@ -4,6 +4,6 @@ plotly
 scikit-learn
 seaborn
 statsmodels
-mariadb
+mariadb==0.9.52
 sqlalchemy
 mysql-connector-python
