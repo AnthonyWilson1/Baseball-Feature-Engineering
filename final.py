@@ -156,7 +156,6 @@ def main():
         copy.Runner_Out AS Runner_Out_away_team,
         orig.Sac_Bunt AS Sac_Bunt_home_team,
         copy.Sac_Bunt AS Sac_Bunt_away_team,
-        copy.Sac_Bunt AS Sac_Bunt_away_team,
         orig.Sac_Fly AS Sac_Fly_home_team,
         copy.Sac_Fly AS Sac_Fly_away_team,
         orig.Sac_Fly_DP AS Sac_Fly_DP_home_team,
