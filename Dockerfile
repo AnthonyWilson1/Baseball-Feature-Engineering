@@ -14,7 +14,7 @@ RUN apt-get update \
      python3-dev \
   && rm -rf /var/lib/apt/lists/*
 
-COPY hw_06.py .
+# COPY hw_06.py .
 COPY . /app
 
 CMD sleep 120 && sh /app/test.sh

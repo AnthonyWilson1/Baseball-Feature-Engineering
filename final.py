@@ -28,9 +28,9 @@ def main():
     pd.set_option("display.max_columns", None)
     pd.set_option("display.max_rows", None)
 
-    db_user = "test"
+    db_user = "root"
     db_pass = "test"  # pragma: allowlist secret
-    db_host = "localhost"
+    db_host = "mariadb"
     db_database = "baseball"
     connect_string = f"mysql+mysqlconnector://{db_user}:{db_pass}@{db_host}/{db_database}"  # pragma: allowlist secret
 
@@ -38,21 +38,21 @@ def main():
 
     connection = sql_engine.connect()
 
-    # index_game_id = text("CREATE INDEX idx_game_id ON team_batting_counts (game_id)")
+    index_game_id = text("CREATE INDEX idx_game_id ON team_batting_counts (game_id)")
 
-    # connection.execute(index_game_id)
+    connection.execute(index_game_id)
 
-    # index_game_id = text("CREATE INDEX idx_team_id ON team_batting_counts (team_id)")
+    index_game_id = text("CREATE INDEX idx_team_id ON team_batting_counts (team_id)")
 
-    # connection.execute(index_game_id)
+    connection.execute(index_game_id)
 
-    # index_game_id_p = text("CREATE INDEX idx_game_id_p ON pitcher_counts (game_id)")
+    index_game_id_p = text("CREATE INDEX idx_game_id_p ON pitcher_counts (game_id)")
 
-    # connection.execute(index_game_id_p)
+    connection.execute(index_game_id_p)
 
-    # index_game_id_p = text("CREATE INDEX idx_team_id_p ON pitcher_counts (team_id)")
+    index_game_id_p = text("CREATE INDEX idx_team_id_p ON pitcher_counts (team_id)")
 
-    # connection.execute(index_game_id_p)
+    connection.execute(index_game_id_p)
 
     # response is home team wins (0,1)
     # each row is going to be a game a team plays
@@ -155,6 +155,7 @@ def main():
         orig.Runner_Out AS Runner_Out_home_team,
         copy.Runner_Out AS Runner_Out_away_team,
         orig.Sac_Bunt AS Sac_Bunt_home_team,
+        copy.Sac_Bunt AS Sac_Bunt_away_team,
         copy.Sac_Bunt AS Sac_Bunt_away_team,
         orig.Sac_Fly AS Sac_Fly_home_team,
         copy.Sac_Fly AS Sac_Fly_away_team,
@@ -1034,7 +1035,7 @@ def main():
         lambda x: make_clickable(x["link"], "plot"), axis=1
     )
 
-    with open("HW_05.html", "w") as file:
+    with open("final.html", "w") as file:
         file.write("<h1>baseball</h1>")
         file.write(
             result3.to_html(

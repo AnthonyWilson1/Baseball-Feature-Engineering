@@ -26,4 +26,4 @@ pip3 install -r requirements.txt
 
 # python3 dockertest.py
 
-python3 hw_06.py
+python3 final.py
