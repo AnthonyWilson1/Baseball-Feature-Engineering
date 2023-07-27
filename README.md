@@ -1,22 +1,89 @@
 # PythonProject
 
-# Setup for developement:
+# Data:
 
-- Setup a python 3.x venv (usually in `.venv`)
-  - You can run `./scripts/create-venv.sh` to generate one
-- `pip3 install --upgrade pip`
-- Install pip-tools `pip3 install pip-tools`
-- Update dev requirements: `pip-compile --output-file=requirements.dev.txt requirements.dev.in`
-- Update requirements: `pip-compile --output-file=requirements.txt requirements.in`
-- Install dev requirements `pip3 install -r requirements.dev.txt`
-- Install requirements `pip3 install -r requirements.txt`
-- `pre-commit install`
+I used baseball.sql which has tables of baseball data at the player and team level.
+The tables I used specifically where team_batter_counts and pitcher_counts. Some columns are duplicated,
+such as ground outs, etc. Although they had the same name, the data was different. This is one thing to note for the
+analysis.
 
-## Update versions
+# Variables:
 
-`pip-compile --output-file=requirements.dev.txt requirements.dev.in --upgrade`
-`pip-compile --output-file=requirements.txt requirements.in --upgrade`
+The variables I explored are the following:
+plateApperance_home_team,
+plateApperance_away_team,
+toBase_home_team,
+toBase_away_team,
+Bunt_Ground_Out_home_team,
+Bunt_Ground_Out_away_team,
+Bunt_Pop_Out_home_team,
+Bunt_Pop_Out_away_team,
+Double_home_team,
+Double_away_team,
+Field_Error_home_team,
+Field_Error_away_team,
+Fly_Out_home_team,
+Fly_Out_away_team,
+Ground_Out_home_team,
+Ground_Out_away_team,
+Intent_Walk_home_team,
+Intent_Walk_away_team,
+Line_Out_home_team,
+Line_Out_away_team,
+Pop_Out_home_team,
+Pop_Out_away_team,
+Runner_Out_home_team,
+Runner_Out_away_team,
+Single_home_team,
+Single_away_team,
+Triple_home_team,
+Triple_away_team,
+Walk_home_team,
+Walk_away_team,
+Home_Run_home_team,
+Home_Run_away_team,
+RollingBattingAverage_home_team,
+RollingBattingAverage_away_team,
+DaysSinceLastPitch_diff,
+home_team_endingInning,
+away_team_endingInning,
+home_team_Strikeout,
+away_team_Strikeout,
+home_team_pitchesThrown,
+away_team_pitchesThrown,
+HR_Hits_home_team (HR/Hits),
+HR_Hits_away_team (HR/Hits)
 
-# Run `pre-commit` locally.
+# Final Model:
 
-`pre-commit run --all-files`
+I used a Logistic Regression and split the training and testing data by the date of the games played. There is a 70/30
+split of the testing and training data. The accuracy of the model is .63.
+
+The variables in my final model with p-values below .05 are as follows:
+plateApperance_home_team,
+plateApperance_away_team,
+toBase_home_team,
+toBase_away_team,
+Bunt_Pop_Out_home_team,
+Double_home_team,
+Double_away_team,
+Field_Error_home_team,
+Field_Error_away_team,
+Fly_Out_home_team,
+Fly_Out_away_team,
+Ground_Out_home_team,
+Ground_Out_away_team,
+Line_Out_home_team,
+Line_Out_away_team,
+Pop_Out_home_team,
+Pop_Out_away_team,
+Runner_Out_home_team,
+Single_home_team,
+Single_away_team,
+Walk_home_team,
+Walk_away_team,
+Home_Run_home_team,
+RollingBattingAverage_home_team,
+home_team_endingInning,
+away_team_endingInning,
+HR_Hits_away_team

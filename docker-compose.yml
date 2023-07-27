@@ -1,0 +1,28 @@
+version: "2.1"
+services:
+  mariadb:
+    image: lscr.io/linuxserver/mariadb:latest
+    container_name: mariadb
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - MYSQL_ROOT_PASSWORD=test # pragma: allowlist secret
+    volumes:
+      - ./:/config
+    ports:
+      - 3308:3306
+    restart: unless-stopped
+  container2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Python
+    ports:
+      - 3307:3308
+    volumes:
+      - ./:/app
+    depends_on:
+      - mariadb
+    # command: ["sh", "/app/test.sh"]
+    # restart: no

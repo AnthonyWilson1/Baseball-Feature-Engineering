@@ -12,6 +12,7 @@ numpy
 plotly
 scikit-learn
 seaborn
-pyspark
-pyspark-stubs
 statsmodels
+mariadb==0.9.52
+sqlalchemy
+mysql-connector-python
