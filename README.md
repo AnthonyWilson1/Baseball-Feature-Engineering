@@ -3,8 +3,8 @@
 # Data:
 
 I used baseball.sql which has tables of baseball data at the player and team level.
-The tables I used specifically where team_batter_counts and pitcher_counts. Some columns are duplicated,
-such as ground outs, etc. Although they had the same name, the data was different. This is one thing to note for the
+The tables I used specifically were team_batter_counts and pitcher_counts. Some columns are duplicated,
+such as ground outs, etc. Although they have the same name, the data was different. This is one thing to note for the
 analysis.
 
 # Variables:
